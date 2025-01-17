@@ -68,6 +68,8 @@ kernelCommandLine = "sysctl.vm.max_map_count=262144"
 ### В Linux
 При использовании Linux на хосте докера достаточно выполнить команду
 
-```echo "vm.max_map_count=262144" >> /etc/sysctl.conf```
+```echo "vm.max_map_count = 262144" >> /etc/sysctl.conf```
 
-```echo "sysctl -w fs.file-max=65536" >> /etc/sysctl.conf```
+```echo "fs.file-max = 65536" >> /etc/sysctl.conf```
+# Применяем изменения
+```sudo sysctl -p```
